@@ -11,6 +11,10 @@ class Field extends Component {
     };
   }
 
+  say(input){
+    // alert(input);
+  }
+
   addError(message){
     this.setState({
       error: message
@@ -35,8 +39,6 @@ class Field extends Component {
       self.updateState();
     });
   }
-
-
 
   keyUpHandler(){
     var element = ReactDOM.findDOMNode(this.refs.input);

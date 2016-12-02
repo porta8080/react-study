@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 import Field from './Field';
+import store from 'store2'
 
 class App extends Component {
 
   componentDidMount(){
-    console.log(this.refs.name.say('Houve um erro'))
+    store.set('somevar','somevalue');
+    // window.localStorage.setItem('somevar','somevalue');
   }
 
   render() {
@@ -18,6 +20,7 @@ class App extends Component {
             </Field>
           </Col>
         </Row>
+        {this.props.children}
       </Grid>
     );
   }
